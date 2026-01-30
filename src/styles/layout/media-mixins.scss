@@ -1,0 +1,51 @@
+@use "./breakpoints-variables" as *;
+
+//   Sample of usage
+//   @include media-query(sm) min and max
+//   @include media-query(md, 'min') only min
+//   @include media-query(xs, 'max') only max
+@mixin media-query($breakpoint, $type: none) {
+  $breakpointData: map-get($breakpoints, $breakpoint);
+
+  @if $breakpointData {
+    $min: map-get($breakpointData, begin);
+    $max: map-get($breakpointData, end);
+
+    @if $type == "min" {
+      @media (min-width: $min) {
+        @content;
+      }
+    } @else if $type == "max" {
+      @media (max-width: $max) {
+        @content;
+      }
+    } @else {
+      @media (min-width: $min) and (max-width: $max) {
+        @content;
+      }
+    }
+  }
+}
+//   Sample of usage:
+//   @include media-query-range(lg, xl)
+@mixin media-query-range($min-breakpoint, $max-breakpoint) {
+  @include media-query($min-breakpoint, "min") {
+    @include media-query($max-breakpoint, "max") {
+      @content;
+    }
+  }
+}
+//   Sample of usage:
+//   @include media-query-width-height(820px, 1000px)
+@mixin media-query-width-height($width, $height) {
+  @media (min-width: $width) and (min-height: $height) {
+    @content;
+  }
+}
+//   Sample of usage:
+//   @include media-query-width-range(390px, 420px)
+@mixin media-query-width-range($min-width, $max-width) {
+  @media (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}

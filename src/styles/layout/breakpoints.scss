@@ -1,0 +1,39 @@
+$breakpoints: (
+  sm: (
+    begin: 320px,
+    end: 559.99px,
+    container-width: 336px,
+  ),
+  md: (
+    begin: 560px,
+    end: 959.99px,
+    container-width: 912px,
+    margin: 24px,
+    gutter: 24px,
+    columns: 12,
+  ),
+  lg: (
+    begin: 960px,
+    end: 1279.99px,
+    container-width: 1184px,
+    margin: 48px,
+    gutter: 24px,
+    columns: 12,
+  ),
+  xl: (
+    begin: 1280px,
+    end: 1619.99px,
+    container-width: 1476px,
+    margin: 72px,
+    gutter: 24px,
+    columns: 12,
+  ),
+  xxl: (
+    begin: 1620px,
+    end: 60000.99px,
+    container-width: 1428px,
+    margin: 96px,
+    gutter: 32px,
+    columns: 12,
+  ),
+);

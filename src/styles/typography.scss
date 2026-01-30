@@ -1,0 +1,23 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--riverty-black);
+}
+
+h4 {
+  font-size: var(--font-size-24) !important;
+  line-height: var(--line-height-32) !important;
+}
+
+h5 {
+  font-size: var(--font-size-16) !important;
+  line-height: var(--line-height-24) !important;
+}
+
+h6 {
+  font-size: var(--font-size-14);
+  line-height: var(--line-height-18);
+}

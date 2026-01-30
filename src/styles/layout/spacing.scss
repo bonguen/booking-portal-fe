@@ -1,0 +1,68 @@
+$margin-values: (
+  0: var(--gutter0),
+  1: var(--gutter4),
+  2: var(--gutter8),
+  3: var(--gutter12),
+  4: var(--gutter16),
+  5: var(--gutter20),
+  6: var(--gutter24),
+  7: var(--gutter28),
+  8: var(--gutter32),
+  9: var(--gutter36),
+  10: var(--gutter40),
+  11: var(--gutter44),
+  12: var(--gutter48),
+  13: var(--gutter56),
+  14: var(--gutter64),
+  15: var(--gutter72),
+  16: var(--gutter80),
+  auto: auto,
+);
+
+$sides: (top, right, bottom, left);
+$properties: (margin, padding);
+
+// loop each property "margin" | "padding"
+@each $property in $properties {
+  // get first letter of property "m" | "p"
+  $propertySlice: str-slice($property, 0, 1);
+  // loop each margin value
+  @each $value-key, $value in $margin-values {
+    // loop each side "top" | "left" etc.
+    @each $side in $sides {
+      // get first letter of side "t" | "l" etc.
+      $sideSlice: str-slice($side, 0, 1);
+      // create class "m-t-1" | "p-r-2"
+      .#{$propertySlice}-#{$sideSlice}-#{$value-key} {
+        // create css property "margin-top": "1rem"
+        #{$property}-#{$side}: $value !important;
+      }
+    }
+    // create vertical classes "m-v-1" | "p-v-2"
+    .#{$propertySlice}-v-#{$value-key} {
+      // create css property "margin-top-1" | "padding-top-2"
+      #{$property}-top: $value !important;
+      #{$property}-bottom: $value !important;
+    }
+    // create horizontal classes "m-h-1" | "p-h-2"
+    .#{$propertySlice}-h-#{$value-key} {
+      // create css property "margin-left: 1rem" | "padding-left: 2rem"
+      #{$property}-left: $value !important;
+      #{$property}-right: $value !important;
+    }
+    // create classes for all sides "m-1" | "p-2"
+    .#{$propertySlice}-#{$value-key} {
+      // create css property for all sides "margin: 2rem" | "padding: 1rem:"
+      #{$property}: $value !important;
+    }
+  }
+}
+
+// create classes for all sides "g-1" | "g-2"
+@each $value-key, $value in $margin-values {
+  .g-#{$value-key},
+  .row.g-#{$value-key} {
+    // create css property for gap "gap: 2rem"
+    gap: $value;
+  }
+}

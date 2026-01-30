@@ -1,0 +1,16 @@
+// Create Mixins for Reusable Styles to match DRY-Principle
+@mixin non-header-typography(
+  $font-weight-value,
+  $font-size-value,
+  $line-height-value
+) {
+  font-weight: $font-weight-value;
+  font-size: $font-size-value;
+  line-height: $line-height-value;
+}
+
+@mixin fraction-grid($columns: 1, $fraction-size: 1fr, $gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($columns, $fraction-size);
+  gap: $gap;
+}

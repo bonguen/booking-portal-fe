@@ -1,0 +1,19 @@
+@use "./breakpoints-variables" as *;
+@use "./media-mixins" as *;
+
+@each $bp, $ranges in $breakpoints {
+  $begin: map-get($ranges, begin);
+  $end: map-get($ranges, end);
+
+  .hide-#{$bp}-max {
+    @include media-query($bp, "max") {
+      display: none;
+    }
+  }
+
+  .hide-#{$bp}-min {
+    @include media-query($bp, "min") {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+/* Global Design Tokens (CSS Custom Properties) */
+:root {
+  /* Riverty COLOUR VARIABLES */
+  --riverty-white: #ffffff;
+  --riverty-black: #000000;
+  /* Riverty COLOUR VARIABLES */
+
+  /* TYPOGRAPHY */
+  --font-family: "Open Sans", sans-serif;
+  --font-weight-bolder: 700;
+  --font-weight-bold: 600;
+  --font-weight-semi-bold: 500;
+  --font-weight-normal: 400;
+  --small-font-size: 11px;
+  --global-font-size: 16px;
+  --font-size-80: 5rem;
+  --font-size-60: 3.75rem;
+  --font-size-64: 4rem;
+  --font-size-56: 3.5rem;
+  --font-size-52: 3.25rem;
+  --font-size-50: 3.125rem;
+  --font-size-44: 2.75rem;
+  --font-size-40: 2.5rem;
+  --font-size-36: 2.25rem;
+  --font-size-34: 2.125rem;
+  --font-size-32: 2rem;
+  --font-size-30: 1.875rem;
+  --font-size-28: 1.75rem;
+  --font-size-24: 1.5rem;
+  --font-size-20: 1.25rem;
+  --font-size-18: 1.125rem;
+  --font-size-16: 1rem;
+  --font-size-14: 0.875rem;
+  --font-size-12: 0.75rem;
+  --font-size-10: 0.625rem;
+  --line-height-80: 5rem;
+  --line-height-72: 4.5rem;
+  --line-height-56: 3.75rem;
+  --line-height-52: 3.5rem;
+  --line-height-48: 3rem;
+  --line-height-44: 2.75rem;
+  --line-height-40: 2.5rem;
+  --line-height-34: 2.125rem;
+  --line-height-32: 2rem;
+  --line-height-28: 1.75rem;
+  --line-height-24: 1.5rem;
+  --line-height-22: 1.375rem;
+  --line-height-20: 1.25rem;
+  --line-height-18: 1.125rem;
+  --line-height-16: 1rem;
+  --line-height-14: 0.875rem;
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  --border-width-sm: 0.03125rem;
+  --border-width-md: 0.0625rem;
+  --border-width-lg: 0.125rem;
+  --border-width-xl: 0.25rem;
+  --border-width-xxl: 0.375rem;
+  --border-width-xxxl: 0.5rem;
+  --border-default: var(--border-width-sm) solid var(--vw-primary-50);
+  --letter-spacing-0-15-dynamic: 0.15%;
+  --letter-spacing-0-15: 0.15px;
+  --letter-spacing-0-03: 0.03px;
+  /* TYPOGRAPHY */
+
+  /* SPACING (raw scale) */
+  --gutter0: 0;
+  --gutter1: 0.0625rem;
+  --gutter4: 0.25rem;
+  --gutter6: 0.375rem;
+  --gutter8: 0.5rem;
+  --gutter10: 0.625rem;
+  --gutter12: 0.75rem;
+  --gutter14: 0.875rem;
+  --gutter16: 1rem;
+  --gutter18: 1.125rem;
+  --gutter20: 1.25rem;
+  --gutter24: 1.5rem;
+  --gutter26: 1.625rem;
+  --gutter28: 1.75rem;
+  --gutter30: 1.875rem;
+  --gutter32: 2rem;
+  --gutter34: 2.125rem;
+  --gutter36: 2.25rem;
+  --gutter40: 2.5rem;
+  --gutter44: 2.75rem;
+  --gutter48: 3rem;
+  --gutter52: 3.25rem;
+  --gutter56: 3.5rem;
+  --gutter60: 3.75rem;
+  --gutter64: 4rem;
+  --gutter68: 4.25rem;
+  --gutter72: 4.5rem;
+  --gutter76: 4.75rem;
+  --gutter80: 5rem;
+  --gutter88: 5.5rem;
+  --gutter96: 6rem;
+  --gutter100: 6.25rem;
+  --gutter116: 7.25rem;
+  --gutter120: 7.5rem;
+  --gutter136: 8.5rem;
+  --gutter140: 8.75rem;
+  --gutter156: 9.75rem;
+  --gutter160: 10rem;
+  --gutter180: 11.25rem;
+  --gutter200: 12.5rem;
+  --gutter224: 14rem;
+  --gutter240: 15rem;
+  --gutter448: 28rem;
+  /* SPACING END */
+}

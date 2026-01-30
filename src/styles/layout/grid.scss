@@ -1,0 +1,249 @@
+@use "./breakpoints-variables" as *;
+@use "./media-mixins" as *;
+@use "./responsive-utilities";
+
+$columns: 12;
+$gap: 16px;
+
+@mixin create-selectors($breakpoint: null) {
+  $infix: if($breakpoint == null, "", "-#{$breakpoint}");
+
+  @for $i from 1 through $columns {
+    .col#{$infix}-#{$i} {
+      grid-column-end: span $i;
+    }
+    .col-offset#{$infix}-#{$i} {
+      grid-column-start: $i + 1;
+    }
+    .row#{$infix}-#{$i} {
+      grid-row-end: span $i;
+    }
+    .row-offset#{$infix}-#{$i} {
+      grid-row-start: $i + 1;
+    }
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-gap: $gap;
+  gap: $gap;
+}
+
+@include create-selectors;
+
+@each $breakpoint, $value in $breakpoints {
+  @include media-query($breakpoint) {
+    @include create-selectors($breakpoint);
+  }
+}
+
+.container {
+  width: 100%;
+  padding-left: var(--gutter48);
+  padding-right: var(--gutter48);
+  margin-right: auto;
+  margin-left: auto;
+
+  @include media-query(sm, "max") {
+    padding-left: var(--gutter24);
+    padding-right: var(--gutter24);
+  }
+
+  @each $breakpoint, $value in $breakpoints {
+    @include media-query($breakpoint) {
+      max-width: map-get($value, container-width) !important;
+    }
+  }
+}
+
+.navbar-container {
+  padding: 0 var(--gutter48);
+}
+
+.d {
+  &-f {
+    display: flex;
+  }
+
+  &-i-f {
+    display: inline-flex;
+  }
+
+  &-i-b {
+    display: inline-block;
+  }
+}
+
+.a-i {
+  &-c {
+    align-items: center;
+  }
+
+  &-fe {
+    align-items: flex-end;
+  }
+
+  &-fs {
+    align-items: flex-start;
+  }
+
+  &-b {
+    align-items: baseline;
+  }
+}
+
+.j-c {
+  &-c {
+    justify-content: center;
+  }
+
+  &-sa {
+    justify-content: space-around;
+  }
+
+  &-sb {
+    justify-content: space-between;
+  }
+
+  &-se {
+    justify-content: space-evenly;
+  }
+
+  &-fe {
+    justify-content: flex-end;
+  }
+}
+
+.f-d {
+  &-r {
+    flex-direction: row;
+  }
+
+  &-c {
+    flex-direction: column;
+  }
+
+  &-rr {
+    flex-direction: row-reverse;
+  }
+
+  &-cr {
+    flex-direction: column-reverse;
+  }
+}
+
+.f-w {
+  &-w {
+    flex-wrap: wrap;
+  }
+
+  &-wr {
+    flex-wrap: wrap-reverse;
+  }
+
+  &-nw {
+    flex-wrap: nowrap;
+  }
+}
+
+.f-1 {
+  flex: 1;
+}
+
+.block {
+  display: block;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-f-c {
+  width: fit-content;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.single-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  &-from-md-1-1n5 {
+    @extend .single-grid;
+    @include media-query("md", "min") {
+      grid-template-columns: 1fr 1.5fr;
+    }
+  }
+
+  &-from-md-1-1 {
+    @extend .single-grid;
+    @include media-query("md", "min") {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &-from-lg-1 {
+    @extend .single-grid;
+    @include media-query(lg, "min") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-from-lg-1-1 {
+    @extend .single-grid;
+    @include media-query(lg, "min") {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &-from-sm-1-1 {
+    @extend .single-grid;
+    @include media-query(sm, "min") {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &-from-xl-1-1 {
+    @extend .single-grid;
+    @include media-query("xl", "min") {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &-from-xl-1-1n5 {
+    @extend .single-grid;
+    @include media-query("xl", "min") {
+      grid-template-columns: 1fr 1.5fr;
+    }
+  }
+
+  &-from-xl-1-2 {
+    @extend .single-grid;
+    @include media-query("xl", "min") {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  &-from-xl-1-1-1 {
+    @include media-query("xl", "min") {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+.border-radius {
+  &-md {
+    border-radius: var(--border-radius-md);
+  }
+  &-sm {
+    border-radius: var(--border-radius-sm);
+  }
+}
