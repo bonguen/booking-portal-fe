@@ -9,46 +9,8 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { BookingService } from '../../services/booking.service';
 import { BookingDTO } from '../../models/booking.model';
-import { map, Observable, tap } from 'rxjs';
-export interface UserData {
-  id: string;
-  name: string;
-  progress: string;
-  fruit: string;
-}
+import { Observable, tap } from 'rxjs';
 
-/** Constants used to fill up our data base. */
-const FRUITS: string[] = [
-  'blueberry',
-  'lychee',
-  'kiwi',
-  'mango',
-  'peach',
-  'lime',
-  'pomegranate',
-  'pineapple',
-];
-const NAMES: string[] = [
-  'Maia',
-  'Asher',
-  'Olivia',
-  'Atticus',
-  'Amelia',
-  'Jack',
-  'Charlotte',
-  'Theodore',
-  'Isla',
-  'Oliver',
-  'Isabella',
-  'Jasper',
-  'Cora',
-  'Levi',
-  'Violet',
-  'Arthur',
-  'Mia',
-  'Thomas',
-  'Elizabeth',
-];
 @Component({
   selector: 'app-home',
   imports: [
