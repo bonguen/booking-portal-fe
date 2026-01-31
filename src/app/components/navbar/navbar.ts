@@ -68,7 +68,7 @@ export class Navbar {
       flag: 'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/de.svg',
     },
   ];
-  selectedLanguage = this.languages[1];
+  selectedLanguage = this.languages[0];
 
   constructor(
     private translateService: TranslateService,
@@ -86,9 +86,9 @@ export class Navbar {
   }
 
   switchLanguage(language: string) {
-    this.selectedLanguage = this.languages.find(
-      (lang: { code: string }) => lang.code === language,
-    ) || this.selectedLanguage;
+    this.selectedLanguage =
+      this.languages.find((lang: { code: string }) => lang.code === language) ||
+      this.selectedLanguage;
     this.translateService.use(language);
   }
 }
