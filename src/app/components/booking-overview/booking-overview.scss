@@ -1,0 +1,5 @@
+/* Reset override: ensure table cells are vertically centered */
+.mat-mdc-table .mat-mdc-cell,
+.mat-mdc-table .mat-mdc-header-cell {
+  vertical-align: middle;
+}
