@@ -1,0 +1,124 @@
+@use "../../../styles/layout/media-mixins.scss" as media;
+@import "../../../styles/variables.scss";
+
+.navbar {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  opacity: 0.8;
+  background-color: var(--riverty-gray);
+  color: var(--riverty-black);
+  padding: 16px 48px;
+  border-bottom: 3px solid var(--riverty-green);
+  z-index: 1;
+  height: 68px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--riverty-green);
+  &:hover {
+    border-bottom: 1px solid var(--riverty-green);
+  }
+}
+
+#name {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: var(--riverty-green);
+}
+
+#type {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--riverty-green);
+  padding-bottom: 4px;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.menu li a {
+  color: var(--riverty-green);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu li a:hover {
+  border-bottom: 2px solid var(--riverty-green);
+}
+
+.link.active {
+  border-bottom: 2px solid var(--riverty-green);
+  color: var(--riverty-green);
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--riverty-green);
+}
+
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 150px;
+  background-color: var(--riverty-gray);
+  opacity: 0.7;
+  margin-top: 68px;
+  transition: 0.3s;
+  z-index: 5;
+}
+
+.sidebar.active {
+  display: block;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 1rem;
+}
+
+@include media.media-query(md) {
+  .navbar {
+    padding: 0.2rem;
+  }
+  .menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

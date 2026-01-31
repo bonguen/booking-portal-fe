@@ -1,1 +1,54 @@
-<p>navbar works!</p>
+<nav class="navbar">
+  <div class="hamburger" style="padding-left: 8px" (click)="toggleSidebar()">
+    ☰
+  </div>
+  <div class="logo">
+    <img src="assets/imgs/logo.png" alt="Riverty Logo" />
+    <span id="name">Riverty</span>
+    <span id="type">Booking</span>
+  </div>
+  <ul class="menu">
+    @for (link of links; track link.path) {
+      <li>
+        <a
+          class="link"
+          [routerLink]="[link.path]"
+          [fragment]="link.fragment"
+          routerLinkActive="active"
+          >{{ link.label | translate }}</a
+        >
+      </li>
+    }
+  </ul>
+  <button mat-button [matMenuTriggerFor]="languageMenu" class="btn-outline">
+    <img
+      [src]="selectedLanguage.flag"
+      alt="{{ selectedLanguage.name }}"
+      style="width: 20px; padding-top: 8px"
+    />
+  </button>
+  <mat-menu #languageMenu="matMenu">
+    @for (lang of languages; track lang.code) {
+      <button mat-menu-item (click)="switchLanguage(lang.code)">
+        <img [src]="lang.flag" alt="{{ lang.name }}" style="width: 20px" />
+        {{ lang.name }}
+      </button>
+    }
+  </mat-menu>
+</nav>
+<div class="sidebar" [class.active]="sidebarActive | async">
+  <ul>
+    @for (link of links; track link.path) {
+      <li>
+        <a
+          class="link"
+          [routerLink]="[link.path]"
+          [fragment]="link.fragment"
+          routerLinkActive="active"
+          (click)="toggleSidebar()"
+          >{{ link.label | translate }}</a
+        >
+      </li>
+    }
+  </ul>
+</div>
