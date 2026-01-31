@@ -1,0 +1,14 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  max-height: 100dvh;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@supports (height: 100svh) {
+  .app-shell {
+    height: 100svh;
+    max-height: 100svh;
+  }
+}

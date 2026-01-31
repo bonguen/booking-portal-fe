@@ -7,7 +7,7 @@ import { Home } from './components/home/home';
   selector: 'app-root',
   imports: [RouterOutlet, Navbar, Home],
   templateUrl: './app.html',
-  styleUrl: './app.css',
+  styleUrl: './app.scss',
 })
 export class App {
   protected readonly title = signal('booking-portal-fe');
