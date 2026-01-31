@@ -7,6 +7,7 @@ import {
   provideHttpClient,
   withInterceptorsFromDi,
 } from '@angular/common/http';
+import { TRANSLATE_HTTP_LOADER_CONFIG } from '@ngx-translate/http-loader';
 
 // Third-Party-Modules
 import {
@@ -45,6 +46,15 @@ bootstrapApplication(App, {
         },
       }),
     ),
+
+    // Provide TRANSLATE_HTTP_LOADER_CONFIG
+    {
+      provide: TRANSLATE_HTTP_LOADER_CONFIG,
+      useValue: {
+        prefix: 'assets/i18n/',
+        suffix: '.json',
+      },
+    },
   ],
 })
   .then((appRef) => {
