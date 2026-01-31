@@ -3,5 +3,9 @@
     "home": "Startseite",
     "bookings": "Buchungen",
     "profile": "Profil"
-  }
+  },
+  "HOME": "Startseite",
+  "BOOKINGS": "Buchungen",
+  "BOOKING_DETAILS": "Buchungsdetails",
+  "BOOKING_CREATION": "Buchung erstellen"
 }

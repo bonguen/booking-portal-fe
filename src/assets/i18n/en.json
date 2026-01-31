@@ -3,5 +3,9 @@
     "home": "Home",
     "bookings": "Bookings",
     "profile": "Profile"
-  }
+  },
+  "HOME": "Home",
+  "BOOKINGS": "Bookings",
+  "BOOKING_DETAILS": "Booking Details",
+  "BOOKING_CREATION": "Create Booking"
 }
