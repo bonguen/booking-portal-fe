@@ -1,3 +1,8 @@
+:host {
+  height: 100%;
+  width: 100%;
+}
+
 /* Reset override: ensure table cells are vertically centered */
 .mat-mdc-table .mat-mdc-cell,
 .mat-mdc-table .mat-mdc-header-cell {

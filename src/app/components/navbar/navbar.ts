@@ -19,8 +19,8 @@ export const NAVBAR_LINKS: {
   label: string;
   fragment?: string;
 }[] = [
-  { path: '/home', label: 'HOME', fragment: 'home' },
-  { path: '/bookings', label: 'BOOKINGS', fragment: 'bookings' },
+  { path: '/home', label: 'HOME' },
+  { path: '/bookings-overview', label: 'BOOKINGS' },
   {
     path: '/booking-details',
     label: 'BOOKING_DETAILS',
