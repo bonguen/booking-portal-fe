@@ -56,7 +56,8 @@
               "buildTarget": "booking-portal-fe:build:production"
             },
             "development": {
-              "buildTarget": "booking-portal-fe:build:development"
+              "buildTarget": "booking-portal-fe:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
