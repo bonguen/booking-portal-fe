@@ -7,5 +7,20 @@
   "HOME": "Home",
   "BOOKINGS": "Bookings",
   "BOOKING_DETAILS": "Booking Details",
-  "BOOKING_CREATION": "Create Booking"
+  "BOOKING_CREATION": "Create Booking",
+  "HOME_PAGE": {
+    "TITLE": "Bookings Overview",
+    "FILTER_LABEL": "Filter",
+    "TABLE_ARIA": "Bookings table",
+    "PAGINATOR_ARIA": "Select page of bookings",
+    "NO_DATA": "No data matching the filter \"{{value}}\"",
+    "COLUMNS": {
+      "ID": "ID",
+      "CUSTOMER": "Customer",
+      "START": "Start",
+      "END": "End",
+      "STATUS": "Status",
+      "PRICE": "Price"
+    }
+  }
 }

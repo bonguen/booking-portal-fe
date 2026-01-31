@@ -7,5 +7,20 @@
   "HOME": "Startseite",
   "BOOKINGS": "Buchungen",
   "BOOKING_DETAILS": "Buchungsdetails",
-  "BOOKING_CREATION": "Buchung erstellen"
+  "BOOKING_CREATION": "Buchung erstellen",
+  "HOME_PAGE": {
+    "TITLE": "Buchungsübersicht",
+    "FILTER_LABEL": "Filter",
+    "TABLE_ARIA": "Tabelle der Buchungen",
+    "PAGINATOR_ARIA": "Seite der Buchungen auswählen",
+    "NO_DATA": "Keine Daten passend zum Filter \"{{value}}\"",
+    "COLUMNS": {
+      "ID": "ID",
+      "CUSTOMER": "Kunde",
+      "START": "Beginn",
+      "END": "Ende",
+      "STATUS": "Status",
+      "PRICE": "Preis"
+    }
+  }
 }

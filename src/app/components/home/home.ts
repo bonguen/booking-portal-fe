@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { TranslateModule } from '@ngx-translate/core';
 import { BookingService } from '../../services/booking.service';
 import { BookingDTO } from '../../models/booking.model';
 import { Observable, tap } from 'rxjs';
@@ -22,6 +23,7 @@ import { Observable, tap } from 'rxjs';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
+    TranslateModule,
   ],
   templateUrl: './home.html',
   styleUrl: './home.scss',
