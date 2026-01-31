@@ -64,87 +64,87 @@ $gap: 16px;
 
 .d {
   &-f {
-    display: flex;
+    display: flex !important;
   }
 
   &-i-f {
-    display: inline-flex;
+    display: inline-flex !important;
   }
 
   &-i-b {
-    display: inline-block;
+    display: inline-block !important;
   }
 }
 
 .a-i {
   &-c {
-    align-items: center;
+    align-items: center !important;
   }
 
   &-fe {
-    align-items: flex-end;
+    align-items: flex-end !important;
   }
 
   &-fs {
-    align-items: flex-start;
+    align-items: flex-start !important;
   }
 
   &-b {
-    align-items: baseline;
+    align-items: baseline !important;
   }
 }
 
 .j-c {
   &-c {
-    justify-content: center;
+    justify-content: center !important;
   }
 
   &-sa {
-    justify-content: space-around;
+    justify-content: space-around !important;
   }
 
   &-sb {
-    justify-content: space-between;
+    justify-content: space-between !important;
   }
 
   &-se {
-    justify-content: space-evenly;
+    justify-content: space-evenly !important;
   }
 
   &-fe {
-    justify-content: flex-end;
+    justify-content: flex-end !important;
   }
 }
 
 .f-d {
   &-r {
-    flex-direction: row;
+    flex-direction: row !important;
   }
 
   &-c {
-    flex-direction: column;
+    flex-direction: column !important;
   }
 
   &-rr {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse !important;
   }
 
   &-cr {
-    flex-direction: column-reverse;
+    flex-direction: column-reverse !important;
   }
 }
 
 .f-w {
   &-w {
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
   }
 
   &-wr {
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse !important;
   }
 
   &-nw {
-    flex-wrap: nowrap;
+    flex-wrap: nowrap !important;
   }
 }
 
